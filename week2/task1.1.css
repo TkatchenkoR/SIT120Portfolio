@@ -1,0 +1,17 @@
+.title{
+    color: blue;
+    position: relative;
+    left: 200px;
+}
+
+#table{
+color: blueviolet;
+}
+
+.randomText{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 2px solid lightblue;
+
+
+}
