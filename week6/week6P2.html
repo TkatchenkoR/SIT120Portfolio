@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>       
+        <title>Week6P Task 2 - Vue Checkbox</title>
+    </head>
+
+<body>
+    <h2>Tick all English Premier League Teams</h2>
+    <div id="app">
+        <input type="checkbox" id="city" value="Manchester City" v-model="checkedNames" />
+        <label for="city">Manchester City</label>
+        <input type="checkbox" id="chelsea" value="Chelsea" v-model="checkedNames" />
+        <label for="chelsea">Chelsea</label>
+        <input type="checkbox" id="juventus" value="Juventus" v-model="checkedNames" />
+        <label for="juventus">Juventus</label>
+        <input type="checkbox" id="westHam" value="West Ham United" v-model="checkedNames" />
+        <label for="westHam">West Ham United</label>
+        <input type="checkbox" id="liverpool" value="Liverpool" v-model="checkedNames" />
+        <label for="liverpool">Liverpool</label>
+        <input type="checkbox" id="Barcelona" value="Barcelona" v-model="checkedNames" />
+        <label for="Barcelona">Barcelona</label>
+        <input type="checkbox" id="Real Madrid" value="Real Madrid" v-model="checkedNames" />
+        <label for="Real Madrid">Real Madrid</label>
+
+        <br><p>
+        <span>Checked teams: {{checkedNames}}</span>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+              checkedNames: []
+            }
+          });
+    </script>
+</body>
+
+
+
+
+</html>
+
+
+<!--
+Create a Vue application with checkbox. Below the input you must display
+the checked item on the page
+-->

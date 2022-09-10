@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>       
+        <title>Week7 Credit Task</title>
+    </head>
+    <div id="propApp">
+        <childcomponent :person="person"></childcomponent>
+    </div>
+    
+    <script>
+        var childcomponent = {
+            template: '<div>I am {{person.firstName }} {{person.lastName}}</div>',
+            props: ["person"],
+        };
+        var app = new Vue({
+            el:'#propApp',
+            data: {
+                person: {
+                    firstName: 'Robert',
+                    lastName: 'Tkatchenko',
+                },
+            },
+            components: {
+                childcomponent,
+            },
+        });
+    </script>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>       
+        <title>Week4P Task - Vue Hello World</title>
+    </head>
+    <body>
+        <div id="hello-world-app">
+            <h1>{{msg}}</h1>
+        </div>
+        <script>
+            new Vue({
+                el: "#hello-world-app",
+                data() {
+                  return {
+                    msg: "Hello World!"
+                  }
+                }
+              });
+        </script>
+
+        <div id="v-if">
+            <button @click="testing = !testing">Toggle Vue v-if and v-else</button>
+            <h3 v-if="testing">Testing vue v-if!</h3>
+            <h3 v-else>Tested 👍</h3>
+        </div>
+        <script>
+            new Vue({
+                el:"#v-if",
+                data(){
+                    return {
+                        testing: true
+                    }
+                }
+            })
+        </script>
+
+
+
+        <div id="v-show-example">
+            <br>
+            <button @click="a = !a">Toggle Vue-show</button>
+            <h3 v-show="a">Condition Met</h3>
+            <h3 v-show="!a"> Condition Not Met</h3>
+        </div>
+        <script>
+            new Vue({
+                el:'#v-show-example',
+                data: {
+                    a: true
+                }
+            })
+        </script>
+        <h3>Vue V-for Example</h3>
+        <div id="v-for-example">
+                <li v-for="(value, key, index) in objectExample">
+                      {{ index }}. --{{ key }} --{{ value }}
+                    </li>
+        </div>
+        <script>
+            new Vue({
+                el:'#v-for-example',
+                data() {
+                    return {
+                        objectExample: {
+                            Title: 'Credit-Task3',
+                            Name: 'Robert Tkatchenko',
+                            Date: '09/08/2022',
+                            Course: 'SIT120 Introudction to Responsive Web Applications'
+                          }
+                    } 
+                }
+            })
+        </script>
+
+
+    </body>
+</html>
+
+<!--
+    Within this task, i created a basic "Hello World" vue application. 
+    Extending this application further, i demonstrated my understanding 
+    of conditions and loops, demonstrating use of v-if, v-else, v-show, and v-for.
+    
+-->

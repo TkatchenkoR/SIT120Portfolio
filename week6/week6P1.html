@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>       
+    <title>Week6P Task 1</title>
+</head>
+<body>
+    <!--Input #1-->
+    
+    <div id="app">
+        <h1>Enter Your Email:</h1><input type="text" v-model="message" />
+        <p>Email is {{message}}</p>
+    </div>
+      <script>
+        new Vue({
+            el: "#app",
+            data: {
+              message: "Hello"
+            }
+        });
+      </script>
+
+
+    <!--Input #2-->
+
+    <div id="app2">
+        <h1>Enter Your Password</h1><input type="test" v-model="message2"/>
+        <p>Password is {{message2}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app2",
+            data: {
+              message2: "Hello"
+            }
+          });
+    </script>
+
+    
+</body>
+</html>
