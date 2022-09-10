@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="task1.1.css" />
+        <script src="task1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>       
+        <title>Week1.1 Task</title>
+    </head>
+
+    <body>
+        <h1 class="title">Task 1 Web Responsive Applications</h1>
+        <h2 class="subheading"><u>JavaScript Examle</u></h2>
+        <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Display Date and Time.</button>
+        <p id="demo"></p>
+        <div class="randomText">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+        </div><p>
+        <div id="table">
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contract</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Company1</td>
+                    <td>Contract1</td>
+                    <td>Country1</td>
+                </tr>
+                <tr>
+                    <td>Company2</td>
+                    <td>Contract2</td>
+                    <td>Country2</td>
+                </tr>
+            </table>
+         </div>
+         <div id="orderedList">
+        <ol>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+        </ol>
+         </div>
+         <div id="form">
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+        </form>
+    </div>
+
+    <h2>Credit Task 5:Vue ToDo Component</h2>
+    <div id="app">
+        <div   
+        v-for="todo in todos"
+        :key="todo.title"
+        :style="{ textDecoration: todo.checked? 'line-through':'none' }"
+        >
+        <input type="checkbox" v-model="todo.checked"/>
+        {{ todo.title}}
+        </div>
+    </div>
+    <script src = todo.js></script>
+
+      
+
+    </body>
+</html>
